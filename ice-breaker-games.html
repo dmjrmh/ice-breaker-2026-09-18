@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Fruit of the Spirit - Word Search CG</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 0.8cm;
+    }
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #1e293b;
+      background-color: #ffffff;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      height: 100vh;
+      max-height: 190mm;
+      align-items: center;
+    }
+    .left-side {
+      flex: 1.35;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-right: 2px dashed #cbd5e1;
+      padding-right: 24px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #0f172a;
+      text-transform: uppercase;
+    }
+    .header p {
+      margin: 4px 0 0 0;
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 600;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 7px;
+      background-color: #f8fafc;
+      padding: 14px;
+      border: 2px solid #94a3b8;
+      border-radius: 12px;
+    }
+    .cell {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 21px;
+      font-weight: 800;
+      color: #0f172a;
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      user-select: none;
+    }
+    .right-side {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+      padding-right: 10px;
+    }
+    .scoreboard {
+      display: flex;
+      gap: 16px;
+    }
+    .team-box {
+      flex: 1;
+      border-radius: 12px;
+      padding: 16px 12px;
+      text-align: center;
+    }
+    .team-a {
+      background-color: #ecfdf5;
+      border: 2px solid #10b981;
+    }
+    .team-b {
+      background-color: #eff6ff;
+      border: 2px solid #3b82f6;
+    }
+    .team-title {
+      font-weight: 900;
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+    .team-a .team-title { color: #059669; }
+    .team-b .team-title { color: #2563eb; }
+    .score-checks {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+    .check-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid currentColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 800;
+      background: white;
+    }
+    .rules-card {
+      background-color: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 18px 20px;
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: #334155;
+    }
+    .rules-card strong {
+      color: #0f172a;
+      font-size: 14.5px;
+    }
+    @media print {
+      body { margin: 0; }
+      .container { height: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- KOLOM KIRI: GRID HURUF -->
+    <div class="left-side">
+      <div class="header">
+        <h1>Fruit of the Spirit</h1>
+        <p>Teka-Teki Kata 9 Buah Roh (Galatia 5:22-23)</p>
+      </div>
+
+      <div class="grid">
+        <div class="cell">S</div><div class="cell">E</div><div class="cell">L</div><div class="cell">F</div><div class="cell">C</div><div class="cell">O</div><div class="cell">N</div><div class="cell">T</div><div class="cell">R</div><div class="cell">O</div><div class="cell">L</div><div class="cell">P</div>
+        <div class="cell">L</div><div class="cell">B</div><div class="cell">F</div><div class="cell">M</div><div class="cell">P</div><div class="cell">E</div><div class="cell">A</div><div class="cell">C</div><div class="cell">E</div><div class="cell">X</div><div class="cell">Y</div><div class="cell">A</div>
+        <div class="cell">O</div><div class="cell">K</div><div class="cell">A</div><div class="cell">I</div><div class="cell">P</div><div class="cell">P</div><div class="cell">J</div><div class="cell">T</div><div class="cell">Q</div><div class="cell">W</div><div class="cell">Z</div><div class="cell">T</div>
+        <div class="cell">V</div><div class="cell">I</div><div class="cell">I</div><div class="cell">D</div><div class="cell">G</div><div class="cell">B</div><div class="cell">O</div><div class="cell">G</div><div class="cell">K</div><div class="cell">M</div><div class="cell">N</div><div class="cell">I</div>
+        <div class="cell">E</div><div class="cell">N</div><div class="cell">T</div><div class="cell">F</div><div class="cell">J</div><div class="cell">O</div><div class="cell">Y</div><div class="cell">X</div><div class="cell">R</div><div class="cell">B</div><div class="cell">T</div><div class="cell">E</div>
+        <div class="cell">R</div><div class="cell">D</div><div class="cell">H</div><div class="cell">X</div><div class="cell">V</div><div class="cell">Q</div><div class="cell">A</div><div class="cell">R</div><div class="cell">M</div><div class="cell">C</div><div class="cell">G</div><div class="cell">N</div>
+        <div class="cell">S</div><div class="cell">N</div><div class="cell">F</div><div class="cell">A</div><div class="cell">I</div><div class="cell">T</div><div class="cell">H</div><div class="cell">F</div><div class="cell">U</div><div class="cell">L</div><div class="cell">C</div><div class="cell">C</div>
+        <div class="cell">T</div><div class="cell">E</div><div class="cell">U</div><div class="cell">K</div><div class="cell">D</div><div class="cell">S</div><div class="cell">B</div><div class="cell">T</div><div class="cell">H</div><div class="cell">K</div><div class="cell">L</div><div class="cell">E</div>
+        <div class="cell">K</div><div class="cell">S</div><div class="cell">L</div><div class="cell">Z</div><div class="cell">N</div><div class="cell">A</div><div class="cell">M</div><div class="cell">W</div><div class="cell">Q</div><div class="cell">P</div><div class="cell">B</div><div class="cell">Z</div>
+        <div class="cell">G</div><div class="cell">O</div><div class="cell">O</div><div class="cell">D</div><div class="cell">N</div><div class="cell">E</div><div class="cell">S</div><div class="cell">S</div><div class="cell">T</div><div class="cell">X</div><div class="cell">Y</div><div class="cell">A</div>
+        <div class="cell">X</div><div class="cell">Y</div><div class="cell">Z</div><div class="cell">W</div><div class="cell">J</div><div class="cell">P</div><div class="cell">R</div><div class="cell">V</div><div class="cell">N</div><div class="cell">M</div><div class="cell">K</div><div class="cell">L</div>
+        <div class="cell">G</div><div class="cell">E</div><div class="cell">N</div><div class="cell">T</div><div class="cell">L</div><div class="cell">E</div><div class="cell">N</div><div class="cell">E</div><div class="cell">S</div><div class="cell">S</div><div class="cell">A</div><div class="cell">B</div>
+      </div>
+    </div>
+
+    <!-- KOLOM KANAN -->
+    <div class="right-side">
+      <!-- SCOREBOARD -->
+      <div class="scoreboard">
+        <div class="team-box team-a">
+          <div class="team-title">TIM HIJAU 🟢</div>
+          <div class="score-checks">
+            <div class="check-circle">1</div>
+            <div class="check-circle">2</div>
+            <div class="check-circle">3</div>
+            <div class="check-circle">4</div>
+            <div class="check-circle" style="background:#10b981; color:white;">5★</div>
+          </div>
+        </div>
+        <div class="team-box team-b">
+          <div class="team-title">TIM BIRU 🔵</div>
+          <div class="score-checks">
+            <div class="check-circle">1</div>
+            <div class="check-circle">2</div>
+            <div class="check-circle">3</div>
+            <div class="check-circle">4</div>
+            <div class="check-circle" style="background:#3b82f6; color:white;">5★</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ATURAN MAIN -->
+      <div class="rules-card">
+        <strong>🎮 Aturan Main:</strong><br>
+        1. Rulemaster membacakan deskripsi situasi Gen Z.<br>
+        2. Giliran tim untuk tebak artinya & cari katanya di papan.<br>
+        3. Waktu berpikir & mencari kata: <strong>15 detik</strong>.<br>
+        4. Jika waktu habis <strong>PASS</strong> (tim lawan boleh rebut!).<br>
+        5. Tim pertama yang mengumpulkan <strong>5 poin</strong> adalah pemenangnya!
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
